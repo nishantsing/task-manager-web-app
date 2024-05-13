@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(218, 218, 218);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    min-width: 350px;
+    align-items: center;
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-top: 100px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.display_contianer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.task{
+    background-color: white;
+    margin-top: 8px;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 4px;
+    height: 40px;
+    align-content: center;
+}
+
+#edit_form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form{
+    width: 90%;
+    padding-left: 32px;
+}
+
+input{
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]{
+    width: 65%;
+}
+
+label{
+    display: inline-block;
+    width: 22%;
+}
+
+input[type="submit"]{
+    padding: 5px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    border-radius: 5px;
+}
+
+
+#edit_button{
+    margin-right: 10px;
+    width: 92%;
+}
+
+button{
+    padding: 5px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    border-radius: 5px;
+    margin-top:50px;
+    
+}

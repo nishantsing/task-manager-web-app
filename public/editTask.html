@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="input_container">
+            <h3>Edit Task</h3>
+            <form action="" id="edit_form">
+                <div>
+                    <label for="id">Task ID</label>
+                    <input name="id" type="text" disabled>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                <input name="name" type="text">
+                </div>
+                <div>   
+                    <label for="completion">Completed</label>
+                    <input type="checkbox" name="completion">
+                </div>
+                <input type="submit" value="Edit" id="edit_button">
+            </form>
+        </div>
+        <div>
+            <Button>Back To Tasks</Button>
+        </div>
+    </div>
+</body>
+</html>
