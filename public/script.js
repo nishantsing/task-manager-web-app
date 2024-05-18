@@ -4,8 +4,8 @@ const formDOM = document.querySelector(".input_container");
 const taskInputDOM = document.querySelector(".input_task");
 const formAlertDOM = document.querySelector(".form_alert");
 
-const PORT = 5000;
-const localhost = `http://localhost:${PORT}`;
+// const PORT = 5000;
+// const localhost = `http://localhost:${PORT}`;
 
 // Load tasks from /api/tasks
 const showTasks = async () => {
@@ -13,7 +13,7 @@ const showTasks = async () => {
     try {
         const {
             data: { tasks },
-        } = await axios.get(`${localhost}/api/v1/tasks`, {
+        } = await axios.get(`/api/v1/tasks`, {
             // headers: {
             //     "Access-Control-Allow-Origin": "*"
             // },
@@ -63,7 +63,7 @@ tasksDOM.addEventListener("click", async (e) => {
         loadingDOM.style.visibility = "visible";
         const id = el.parentElement.dataset.id;
         try {
-            await axios.delete(`${localhost}/api/v1/tasks/${id}`);
+            await axios.delete(`/api/v1/tasks/${id}`);
             showTasks();
         } catch (error) {
             console.log(error);
@@ -79,7 +79,7 @@ formDOM.addEventListener("submit", async (e) => {
     const name = taskInputDOM.value;
 
     try {
-        await axios.post(`${localhost}/api/v1/tasks`, { name });
+        await axios.post(`/api/v1/tasks`, { name });
         showTasks();
         taskInputDOM.value = "";
         formAlertDOM.style.display = "block";

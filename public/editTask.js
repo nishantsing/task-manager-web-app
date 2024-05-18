@@ -8,14 +8,14 @@ const params = window.location.search;
 const id = new URLSearchParams(params).get("id");
 let tempName;
 
-const PORT = 5000;
-const localhost = `http://localhost:${PORT}`;
+// const PORT = 5000;
+// const localhost = `http://localhost:${PORT}`;
 
 const showTask = async () => {
     try {
         const {
             data: { task },
-        } = await axios.get(`${localhost}/api/v1/tasks/${id}`);
+        } = await axios.get(`/api/v1/tasks/${id}`);
         const { _id: taskID, completed, name } = task;
 
         // taskIDDOM.textContent = taskID;
@@ -40,7 +40,7 @@ editFormDOM.addEventListener("submit", async (e) => {
 
         const {
             data: { task },
-        } = await axios.patch(`${localhost}/api/v1/tasks/${id}`, {
+        } = await axios.patch(`/api/v1/tasks/${id}`, {
             name: taskName,
             completed: taskCompleted,
         });
