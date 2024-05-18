@@ -182,5 +182,3 @@ const errorHandler = (err, req, res, next) => {
 
 module.exports = errorHandler;
 ```
-
-- @TODO: Patch static files and API

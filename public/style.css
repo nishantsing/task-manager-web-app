@@ -1,3 +1,10 @@
+
+
+:root{
+    --letterSpacing: 1px;
+    --red-dark: #842029;
+    --green-dark: #0f5132;
+}
 body{
     background-color: rgb(218, 218, 218);
 }
@@ -20,6 +27,27 @@ body{
     border-radius: 5px;
     width: 100%;
 }
+.loading_text {
+  visibility: hidden;
+}
+
+.form_alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+.empty_list {
+  text-align: center;
+}
+.task-form .form_alert {
+  margin-top: 1rem;
+}
+
+.single-task-form .form_alert {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 
 .display_contianer{
     display: flex;
@@ -36,7 +64,10 @@ body{
     width: 100%;
     padding-left: 4px;
     height: 40px;
-    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #edit_form{
@@ -73,7 +104,7 @@ input[type="submit"]{
 }
 
 
-#edit_button{
+.edit_button{
     margin-right: 10px;
     width: 92%;
 }
@@ -85,4 +116,46 @@ button{
     border-radius: 5px;
     margin-top:50px;
     
+}
+
+/* Task Links */
+.task-links {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+.delete-btn,
+.edit-link {
+  background: transparent;
+  font-size: 0.75rem;
+  border: transparent;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+    background: none; /* Remove any background */
+    border: none; /* Remove any border */
+    outline: none; /* Remove any outline */
+}
+.edit-link {
+  color: var(--green-dark);
+}
+.delete-btn {
+  color: var(--red-dark);
+}
+.task.task-completed .fa-check-circle {
+  visibility: visible;
+}
+
+.task .fa-check-circle {
+  font-size: 1rem;
+  color: var(--green-dark);
+  visibility: hidden;
+}
+
+.text-success {
+  color: var(--green-dark);
 }
